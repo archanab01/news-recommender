@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 @st.cache_data
 
 def load_data():
-    df = pd.read_csv("/Users/DELL/OneDrive/Desktop/AML/news_articles.csv")
+    df = pd.read_csv("articles.csv")
     df = df[['Article_Id', 'Title', 'Author', 'Content', 'URL']]
     df.dropna(subset=['Title', 'Content'], inplace=True)
     df.reset_index(drop=True, inplace=True)
